@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirstbatService } from '../services/firstbat.service';
 
 @Component({
   selector: 'app-scorecard',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./scorecard.component.css']
 })
 export class ScorecardComponent {
-  
+  firstBattingTeamName : any;
+  lastBattingTeamName : any;
+
+   constructor(private service : FirstbatService){}
+
+   ngOnInit(): void{
+     this.getTeamName();
+   }
+   
+   getTeamName(): void{
+    this.service.getSummary()
+    .subscribe((sum: any) => {
+      this.firstBattingTeamName = sum.first_batting[0].team.teamName;
+      this.lastBattingTeamName = sum.first_bowling[0].team.teamName;
+    });
+   }
 }
