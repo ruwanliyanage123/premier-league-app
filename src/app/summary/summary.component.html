@@ -1,6 +1,55 @@
 <mat-card>
     <mat-card-content>
-        
+      <mat-list>
+        <mat-divider></mat-divider>
+            <mat-list-item>
+            <span class="total-spacer"></span>
+              <span>{{first_batting[0].team.teamName}}
+                <span class="total-middle-spacer"></span>
+                {{first_batting[0].team.totalRuns}}/{{first_batting[0].team.wickets}}({{first_batting[0].team.overs}})
+            </span>
+            </mat-list-item>
+        <mat-divider></mat-divider>
+            <mat-list-item>
+                <span>{{first_batting[0].name}}  {{first_batting[0].battedRuns}}({{first_batting[0].balls}})</span>
+                <span class="spacer"></span>
+                <span>{{first_bowling[0].name}}  {{first_bowling[0].wickets}}/{{first_bowling[0].bowledRuns}}({{first_bowling[0].overs}})</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span>{{first_batting[1].name}}  {{first_batting[1].battedRuns}}({{first_batting[1].balls}})</span>
+                <span class="spacer"></span>
+                <span>{{first_bowling[1].name}}  {{first_bowling[1].wickets}}/{{first_bowling[1].bowledRuns}}({{first_bowling[1].overs}})</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span>{{first_batting[2].name}}  {{first_batting[2].battedRuns}}({{first_batting[2].balls}})</span>
+                <span class="spacer"></span>
+                <span>{{first_bowling[2].name}}  {{first_bowling[2].wickets}}/{{first_bowling[2].bowledRuns}}({{first_bowling[2].overs}})</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+                <mat-list-item>
+                <span class="total-spacer"></span>
+                <span>{{second_batting[0].team.teamName}}
+                    <span class="total-middle-spacer"></span>
+                    {{second_batting[0].team.totalRuns}}/{{second_batting[0].team.wickets}}({{second_batting[0].team.overs}})
+                </span>
+                </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span>{{second_batting[0].name}}  {{second_batting[0].battedRuns}}({{second_batting[0].balls}})</span>
+                <span class="spacer"></span>
+                <span>{{second_bowling[0].name}}  {{second_bowling[0].wickets}}/{{second_bowling[0].bowledRuns}}({{second_bowling[0].overs}})</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span>{{second_batting[1].name}}  {{second_batting[1].battedRuns}}({{second_batting[1].balls}})</span>
+                <span class="spacer"></span>
+                <span>{{second_bowling[1].name}}  {{second_bowling[1].wickets}}/{{second_bowling[1].bowledRuns}}({{second_bowling[1].overs}})</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span>{{second_batting[2].name}}  {{second_batting[2].battedRuns}}({{second_batting[2].balls}})</span>
+                <span class="spacer"></span>
+                <span>{{second_bowling[2].name}}  {{second_bowling[2].wickets}}/{{second_bowling[2].bowledRuns}}({{second_bowling[2].overs}})</span>
+            </mat-list-item>
+       </mat-list>    
     </mat-card-content>
-</mat-card>
+  </mat-card>
   
