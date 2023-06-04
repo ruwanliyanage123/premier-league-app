@@ -27,5 +27,5 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class FirstbatComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  data = ELEMENT_DATA;
 }
