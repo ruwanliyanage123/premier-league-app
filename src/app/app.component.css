@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(241, 236, 237);
+}
+
+.scorecard-main-tab{ 
+    width: 700px;
+    height: 800px;
+    margin-top: 20px;
+    margin-left: 350px;
+    background-color: rgb(255, 255, 255);
+}
