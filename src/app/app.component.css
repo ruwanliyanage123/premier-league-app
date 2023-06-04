@@ -1,11 +1,19 @@
 body {
-    background-color: rgb(241, 236, 237);
+    background-color: rgb(218, 218, 214);
+}
+
+.summary-board{
+    width: 700px;
+    height: 150px;
+    margin-top: 5px;
+    margin-left: 350px;
+    background-color: rgb(244, 240, 240);
 }
 
 .scorecard-main-tab{ 
     width: 700px;
     height: 800px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: 350px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }

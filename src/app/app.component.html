@@ -1,10 +1,26 @@
+<div class="parent-background">
+      <mat-card class="summary-board">
+         <mat-card-content>
+            
+         </mat-card-content>
+     </mat-card>
 
-<div class="scorecard-main-tab">
-   <mat-tab-group>
-      <mat-tab label="summary"> Summary </mat-tab>
-      <mat-tab label="scorecard"> Scorecard </mat-tab>
-      <mat-tab label="submit">Submit</mat-tab>
-      <mat-tab label="team"> Team </mat-tab>
-    </mat-tab-group>
+   <div class="scorecard-main-tab">
+      <mat-tab-group>
+         <mat-tab label="summary">
+             <app-summary></app-summary>
+         </mat-tab>
+         <mat-tab label="scorecard">
+            <app-scorecard></app-scorecard>
+         </mat-tab>
+         <mat-tab label="submit">
+            <app-fillteam></app-fillteam>
+         </mat-tab>
+         <mat-tab label="team">
+             <app-adddata></app-adddata>
+         </mat-tab>
+       </mat-tab-group>
+   </div>
 </div>
+
 
