@@ -7,23 +7,28 @@ import { FirstbatService } from 'src/app/services/firstbat.service';
   styleUrls: ['./firstbat.component.css']
 })
 export class FirstbatComponent {
-  score: any;
-  batsman: any;
 
   constructor(private service: FirstbatService){}
 
-  ngOnInit(): void {
-    this.getSummary();
+  batting : any;
+  bowling : any;
+  total :any;
+  overs: any;
+  wickets: any;
+  battingColumns: string[] = ['name', 'runs', 'balls', 'fours', 'sixes', 'sr'];
+  bowlingColumns: string[] = ['name', 'overs', 'runs', 'wickets', 'economy'];
+
+  ngOnInit(){
+    this.getLastBattingResult();
   }
 
-  getSummary(): void {
-    this.service.getSummary()
-      .subscribe((data: any) => {
-        this.score = data;
-        this.batsman = this.score.first_batting
-      });
+  getLastBattingResult():void{
+     this.service.getFirstBattingResult().subscribe((score)=>{
+         this.total = score.first_batting[0].team.totalRuns;
+         this.overs = score.first_batting[0].team.overs;
+         this.wickets = score.first_batting[0].team.wickets;
+         this.batting = score.first_batting;
+         this.bowling = score.first_bowling;
+     });
   }
-
-  displayedColumns: string[] = ['name', 'runs','balls', 'fours', 'sixes', 'sr'];
-
 }

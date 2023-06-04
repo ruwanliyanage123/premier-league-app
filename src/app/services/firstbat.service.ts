@@ -11,7 +11,7 @@ export class FirstbatService {
 
   constructor(private http: HttpClient) { }
 
-  getSummary(): Observable<any> {
+  getFirstBattingResult(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
 }

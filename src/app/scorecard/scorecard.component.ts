@@ -17,7 +17,7 @@ export class ScorecardComponent {
    }
    
    getTeamName(): void{
-    this.service.getSummary()
+    this.service.getFirstBattingResult()
     .subscribe((sum: any) => {
       this.firstBattingTeamName = sum.first_batting[0].team.teamName;
       this.lastBattingTeamName = sum.first_bowling[0].team.teamName;
